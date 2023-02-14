@@ -6,24 +6,28 @@ window.onload = () => {
   document.getElementById("titre").textContent = "DOmaine des Arbres";
 
   // 3. Changez l'ordre de présentation des images avec flex
-  const elem = document.getElementsByClassName("container")[0];
-  elem.setAttribute("style", "display: flex;flex-direction: row;");
+  const elem = document
+    .getElementsByClassName("container")[0]
+    .setAttribute("style", "display: flex;flex-direction: row;");
 
   // 4. Ajoutez le point "Terre" à la liste d'éléments
-  let li = document.createElement("li");
-  li.appendChild(document.createTextNode("Terre"));
-  document.getElementsByTagName("ul")[0].appendChild(li);
+  document
+    .getElementsByTagName("ul")[0]
+    .appendChild(
+      document.createElement("li").appendChild(document.createTextNode("Terre"))
+    );
 
   // 5. Ajoutez l'attribut href manquant à la balise lien de l'image d'arbre.
   // avec la valeur  href="https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree.jpg"
   // Avec le sélecteur suivant, utilisez un "accès par relation" pour faire votre modification.
-  const imageSansLien = document.querySelectorAll(
-    'img[src="https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree.jpg"]'
-  )[0];
-  imageSansLien.setAttribute(
-    "href",
-    "https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree.jpg"
-  );
+  const imageSansLien = document
+    .querySelectorAll(
+      'img[src="https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree.jpg"]'
+    )[0]
+    .setAttribute(
+      "href",
+      "https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree.jpg"
+    );
 
   // 6. Modifiez la police du texte pour toutes les éléments de la liste
   document
