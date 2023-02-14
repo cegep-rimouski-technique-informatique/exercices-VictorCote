@@ -1,5 +1,6 @@
 fizzBuzz();
 estUnPalindrome();
+numberOfDaysBetween2Dates();
 
 function estUnPalindrome() {
   let mot = prompt("votre mot");
@@ -26,4 +27,10 @@ function fizzBuzz() {
     }
     console.log(result);
   }
+}
+
+function numberOfDaysBetween2Dates() {
+  const date1 = new Date("March 2, 1997");
+  const date2 = new Date("Febuary 7, 2023");
+  console.log((date2 - date1) / 1000 / 60 / 60 / 24 + " jours");
 }
