@@ -1,6 +1,8 @@
 fizzBuzz();
 estUnPalindrome();
+fibonacci();
 numberOfDaysBetween2Dates();
+reverseSentence();
 
 function estUnPalindrome() {
   let mot = prompt("votre mot");
@@ -33,4 +35,17 @@ function numberOfDaysBetween2Dates() {
   const date1 = new Date("March 2, 1997");
   const date2 = new Date("Febuary 7, 2023");
   console.log((date2 - date1) / 1000 / 60 / 60 / 24 + " jours");
+}
+
+function fibonacci() {
+  const fibonacci = ["lol", 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+  alert("fibonacci : " + fibonacci[prompt("X de fibonacci")]);
+}
+
+function reverseSentence() {
+  let sentence = prompt("Phrase");
+  let invert = sentence
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""));
+  alert(invert.join(" "));
 }
